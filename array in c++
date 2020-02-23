@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int arr[100];
+	int nelement = 10;
+	int j=0;
+	int search;
+	cout << "enter digit" << endl;
+	for (int i = 0; i < 10; i++){
+		cin >> arr[j];
+	}
+	{
+		search = 12;
+		for (int i = 0; i < 10; i++){
+			if (arr[j] == search)
+				break;
+		}
+		if (j == nelement){
+			cout << "ARRAY CANT FIND" << endl;
+		}
+		else{
+			cout << "array found" << endl;
+	}
+		cout << "deleting" << search << endl;
+		for (int k = j; k < nelement; k++){
+			arr[k] = arr[k + 1];
+			nelement--;
+
+		}
+
+		for (int j = 0; j < nelement; j++){
+			cout << arr[j] << endl;
+		}
+	}
+
+	
+	return 0;
+}
